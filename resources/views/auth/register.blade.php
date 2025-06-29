@@ -35,6 +35,13 @@
                 <label class="block mb-1" for="password_confirmation">Confirm Password</label>
                 <input class="w-full border rounded px-3 py-2" type="password" name="password_confirmation" required>
             </div>
+            <div class="mb-4">
+                <label class="block mb-1" for="role">Role</label>
+                <select class="w-full border rounded px-3 py-2" name="role" required>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
             <button class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition" type="submit">
                 Register
             </button>

@@ -20,12 +20,14 @@ class JwtRegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'role' => 'required|in:user,admin',
         ]);
 
         User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => $request->role,
         ]);
 
         return redirect()->route('jwt.login.form')->with('success', 'Registration successful. Please login.');
