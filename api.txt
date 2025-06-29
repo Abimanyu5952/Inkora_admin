@@ -1,0 +1,15 @@
+curl -X POST http://127.0.0.1:8000/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"your@email.com","password":"your_password"}'
+
+
+  {
+  "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...",
+  "user": { ... },
+  "role": "user",
+  "token_type": "bearer",
+  "expires_in": 3600
+}
+
+
+curl -H "Authorization: Bearer YOUR_ACCESS_TOKEN" http://127.0.0.1:8000/api/products
